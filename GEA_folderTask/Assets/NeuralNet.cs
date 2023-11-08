@@ -92,4 +92,8 @@ public class NeuralNet : MonoBehaviour
     {
         
     }
+    
+    
+    //sources: videoseries on neural networks by the Coding Train
+    // https://www.youtube.com/playlist?list=PLRqwX-V7Uu6aCibgK1PTWWu9by6XFdCfh
 }
