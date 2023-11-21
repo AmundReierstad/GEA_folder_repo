@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,13 +11,26 @@ public class NeuralNet : MonoBehaviour
     [SerializeField] private int numberOfInputs;
     [SerializeField] private int numberOfHiddenLayers;
     [SerializeField] private int numberOfOutputs;
-    // NeuralNet(int nInputs, int nHiddenLayers, int nOutputs)
-    // {
-    //     
-    // }
+    public NeuralNet(int nInputs, int nHiddenLayers, int nOutputs)
+    {
+        try
+        {
+            numberOfWeights = _weightsHiddenOutLayer.ToArray().Length + _weightsInpHiddenLayer.ToArray().Length;
+        }
+        catch (Exception e)
+        {
+            Debug.Log(e);
+        }
+    
+    }
     private Matrix<double> _input;
     private Matrix<double> _weightsInpHiddenLayer;
     private Matrix<double> _weightsHiddenOutLayer;
+    public int numberOfWeights
+    {
+        get;
+        private set;
+    }
     private Matrix<double> _targets;
     private Matrix<double> _biasInputLayer;
     private Matrix<double> _biasOutputLayer;

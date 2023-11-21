@@ -10,21 +10,36 @@ public class Genome :  IEnumerable
 {
   private Random _randomizer = new Random();
   // private Random randomizer = new Random();
-  public float evaluation;
-  public float fitness;
+  public float Evaluation;
+  public float Fitness;
   private List<float> _parameters;
 
+  public int ParameterCount
+  {
+    get
+    {
+      if (_parameters == null) return 0;
+      return _parameters.Count;
+    }
+  }
+
+  //overrideden indexer
+  public float this [int index]
+  {
+    get { return _parameters[index]; }
+    set { _parameters[index] = value; }
+  }
   //constructor
   public Genome(List<float> parameters)
   {
     _parameters = parameters;
-    fitness = 0;
+    Fitness = 0;
   }
   
    //-n = greater, n= lower, 0 =even
   int  CompareGenome(Genome other)
   {
-    return other.fitness.CompareTo(fitness);
+    return other.Fitness.CompareTo(Fitness);
   }
 
   //enumerators
@@ -52,9 +67,9 @@ public class Genome :  IEnumerable
       _parameters[i] = (float)((_randomizer.NextDouble() * range) + minVal);
     }
   }
-  public float[] GetParameterCopy()
+  public List<float> GetParameterCopy()
   {
-    float[] copy = new float[_parameters.Count];
+    List<float> copy = new List<float>();
     for (int i = 0; i < _parameters.Count; i++)
       copy[i] = _parameters[i];
     return copy;
@@ -96,5 +111,6 @@ public class Genome :  IEnumerable
 
     return new Genome(parameters);
   }
+  
 }
 //sources:https://github.com/ArztSamuel/Applying_EANNs/tree/master  
