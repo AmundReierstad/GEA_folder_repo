@@ -6,7 +6,7 @@ using System.IO;
 using UnityEngine;
 using Random = System.Random;
 
-public class Genome :  IEnumerable
+public class Genome :  IComparable<Genome>, IEnumerable<float>
 {
   private Random _randomizer = new Random();
   // private Random randomizer = new Random();
@@ -37,11 +37,13 @@ public class Genome :  IEnumerable
   }
   
    //-n = greater, n= lower, 0 =even
-  int  CompareGenome(Genome other)
+  #region IComparable
+  public int  CompareTo(Genome other)
   {
     return other.Fitness.CompareTo(Fitness);
   }
-
+  #endregion
+  #region IEnumerable
   //enumerators
   public IEnumerator<float> GetEnumerator()
   {
@@ -55,6 +57,7 @@ public class Genome :  IEnumerable
     foreach (var t in _parameters)
       yield return t;
   }
+  #endregion
 
   //set parameter of genome random initially
   public void SetRandomParameters(float minVal, float maxVal)

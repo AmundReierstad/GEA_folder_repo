@@ -704,3 +704,7 @@ C:\Users\Amund R\GEA_folder\GEA_folder_repo\GEA_folderTask\obj\Debug\Assembly-CS
 C:\Users\Amund R\GEA_folder\GEA_folder_repo\GEA_folderTask\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\Amund R\GEA_folder\GEA_folder_repo\GEA_folderTask\obj\Debug\Assembly-CSharp.dll
 C:\Users\Amund R\GEA_folder\GEA_folder_repo\GEA_folderTask\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Amund R\GEA_folder\GEA_folder_repo\GEA_folderTask\Temp\Bin\Debug\Assembly-CSharp\Cinemachine.dll
+C:\Users\Amund R\GEA_folder\GEA_folder_repo\GEA_folderTask\Temp\Bin\Debug\Assembly-CSharp\com.unity.cinemachine.editor.dll
+C:\Users\Amund R\GEA_folder\GEA_folder_repo\GEA_folderTask\Temp\Bin\Debug\Assembly-CSharp\com.unity.cinemachine.editor.pdb
+C:\Users\Amund R\GEA_folder\GEA_folder_repo\GEA_folderTask\Temp\Bin\Debug\Assembly-CSharp\Cinemachine.pdb

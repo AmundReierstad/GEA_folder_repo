@@ -35,4 +35,8 @@ public static class Utilities
             return -1;
         }
     }
+    public static double SoftSignFunction(double xValue)
+    {
+        return xValue / (1 + Math.Abs(xValue));
+    }
 }

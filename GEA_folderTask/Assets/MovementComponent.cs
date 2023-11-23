@@ -6,6 +6,7 @@ using UnityEngine;
 public class MovementComponent : MonoBehaviour
 {
     private Rigidbody _rigidbody;
+    public double[] currentInputs;
     [SerializeField]private float forceStrength=1;
     // Start is called before the first frame update
     void Start()

@@ -321,6 +321,8 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.31f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll"
 -r:"C:/Users/Amund R/GEA_folder/GEA_folder_repo/GEA_folderTask/Library/PackageCache/com.unity.testtools.codecoverage@1.2.4/lib/ReportGenerator/ReportGeneratorMerged.dll"
 -r:"C:/Users/Amund R/GEA_folder/GEA_folder_repo/GEA_folderTask/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Cinemachine.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/com.unity.cinemachine.editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/NuGetForUnity.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.EditorCoroutines.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.ref.dll"
@@ -347,6 +349,9 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Agent.cs"
 "Assets/ArraySpheres.cs"
+"Assets/CarController.cs"
+"Assets/CheckPoint.cs"
+"Assets/GameStateManager.cs"
 "Assets/GeneticAlgo.cs"
 "Assets/GeneticManager.cs"
 "Assets/Genome.cs"
@@ -391,6 +396,7 @@
 "Assets/TextMesh Pro/Examples & Extras/Scripts/VertexShakeB.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/VertexZoom.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/WarpTextExample.cs"
+"Assets/TrackManager.cs"
 "Assets/Utilities.cs"
 -langversion:9.0
 

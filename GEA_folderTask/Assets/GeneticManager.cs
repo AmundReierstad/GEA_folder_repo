@@ -82,7 +82,7 @@ public class GeneticManager : MonoBehaviour
         //Statistics
         if (saveStatistics)
         {
-            _statisticsFileName = "Evaluation - " + GameStateManager.Instance.TrackName + " " + DateTime.Now.ToString("yyyy_MM_dd_HH-mm-ss");
+            _statisticsFileName = "Evaluation - " + GameStateManager.Instance.trackName + " " + DateTime.Now.ToString("yyyy_MM_dd_HH-mm-ss");
             WriteStatisticsFileStart();
             geneticAlgorithm.FitnessCalculationFinished += WriteStatisticsToFile;
         }
@@ -102,7 +102,7 @@ public class GeneticManager : MonoBehaviour
     private void WriteStatisticsFileStart()
     {
         File.WriteAllText(_statisticsFileName + ".txt", "Evaluation of a Population with size " + PopulationSize + 
-                ", on Track \"" + GameStateManager.Instance.TrackName + "\", using the following GA operators: " + Environment.NewLine +
+                ", on Track \"" + GameStateManager.Instance.trackName + "\", using the following GA operators: " + Environment.NewLine +
                 "Selection: " + geneticAlgorithm.Selection.Method.Name + Environment.NewLine +
                 "Recombination: " + geneticAlgorithm.Recombination.Method.Name + Environment.NewLine +
                 "Mutation: " + geneticAlgorithm.Mutation.Method.Name + Environment.NewLine + 
@@ -165,10 +165,10 @@ public class GeneticManager : MonoBehaviour
         agents.Clear();
         AgentsAliveCount = 0;
 
-        foreach (Genome genome in currentPopulation) //writhe mnathelperfunction to utiulites (), gjør ome FNN topologi kallet
-            agents.Add(new Agent(genome, MathHelper.SoftSignFunction, FNNTopology));
+        foreach (Genome genome in currentPopulation) //writhe mnathelperfunction to utiulites (X), gjør ome FNN topologi kallet
+            // agents.Add(new Agent(genome, Utilities.SoftSignFunction, FNNTopology));
 
-        TrackManager.Instance.SetCarAmount(agents.Count);
+            TrackManager.Instance.SetCarAmount(agents.Count);
         IEnumerator<CarController> carsEnum = TrackManager.Instance.GetCarEnumerator();
         for (int i = 0; i < agents.Count; i++)
         {
@@ -225,7 +225,7 @@ public class GeneticManager : MonoBehaviour
         return intermediatePopulation;
     }
     // Recombination operator for the genetic algorithm, recombining random genotypes of the intermediate population
-    private List<Genome> RandomRecombination(List<Genome> intermediatePopulation, uint newPopulationSize)
+    private List<Genome> RandomRecombination(List<Genome> intermediatePopulation, int newPopulationSize)
     {
         //Check input
         if (intermediatePopulation.Count < 2)
